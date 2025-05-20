@@ -1,0 +1,216 @@
+type: collection.insomnia.rest/5.0
+name: Labos
+meta:
+  id: wrk_c8744b3d88ad4f369e404f831d52db22
+  created: 1747719650871
+  modified: 1747719650871
+collection:
+  - name: Usuarios
+    meta:
+      id: fld_7202a461b79c44a1a0370f488b69bcca
+      created: 1747719660217
+      modified: 1747719660217
+      sortKey: -1747719660217
+    children:
+      - name: obtener
+        meta:
+          id: req_413c4e1f01c64ec38b3689c5d1ff4dc2
+          created: 1747719656051
+          modified: 1747719668194
+          isPrivate: false
+          sortKey: -1747719668158
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/11.0.2
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:8080/usuarios
+        name: crear
+        meta:
+          id: req_02e0d82ad6234290bb3ca4c40fa90513
+          created: 1747719670324
+          modified: 1747720129476
+          isPrivate: false
+          sortKey: -1747719670324
+        method: POST
+        body:
+          mimeType: application/json
+          text: |
+            {
+              "nombre": "a",
+              "correo": "a@email.com"
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/11.0.2
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+  - name: Proyectos
+    meta:
+      id: fld_a860a4457ed7421ab56c243a5ed775bf
+      created: 1747720119685
+      modified: 1747720668423
+      sortKey: -1747720119685
+    children:
+      - url: http://localhost:8080/proyectos
+        name: Crear
+        meta:
+          id: req_951296fad2c34ef1addd1e5689785ce8
+          created: 1747720123202
+          modified: 1747720922129
+          isPrivate: false
+          sortKey: -1747720123202
+        method: POST
+        body:
+          mimeType: application/json
+          text: |
+            {
+              "nombre": "Proyecto B",
+              "descripcion": "Descripción del proyecto B",
+              "usuario": {
+                "id": 6
+              }
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/11.0.2
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:8080/proyectos
+        name: Obtener
+        meta:
+          id: req_dd7111ecb7a84f92994b8eb11d53cc95
+          created: 1747720245853
+          modified: 1747720255549
+          isPrivate: false
+          sortKey: -1747720245853
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/11.0.2
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+  - name: Tareas
+    meta:
+      id: fld_8d5ebe1f46c84c99b8840dfce53a7b47
+      created: 1747720626125
+      modified: 1747720626125
+      sortKey: -1747720626125
+    children:
+      - url: http://localhost:8080/tareas
+        name: Crear
+        meta:
+          id: req_fd6685c589be4999bd9d95f8bced82c1
+          created: 1747720628883
+          modified: 1747720932704
+          isPrivate: false
+          sortKey: -1747720628883
+        method: POST
+        body:
+          mimeType: application/json
+          text: |
+            {
+              "titulo": "Diseñar interfaz D",
+              "completada": false,
+              "proyecto": {
+                "id": 3
+              }
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/11.0.2
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:8080/tareas
+        name: Obtener
+        meta:
+          id: req_26ac9c53fa34420086b418ef370d24a0
+          created: 1747720685717
+          modified: 1747720695838
+          isPrivate: false
+          sortKey: -1747720685717
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/11.0.2
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:8080/tareas/proyecto/:proyecto
+        name: Obtener por proyecto
+        meta:
+          id: req_e95d459485154f40ba4116aae9b83176
+          created: 1747720945839
+          modified: 1747720986946
+          isPrivate: false
+          sortKey: -1747720657300
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/11.0.2
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+        pathParameters:
+          - name: proyecto
+            value: "2"
+cookieJar:
+  name: Default Jar
+  meta:
+    id: jar_4d154a7783f9f2cacb8294c3e290b8e599a0e28a
+    created: 1747719650875
+    modified: 1747719650875
+environments:
+  name: Base Environment
+  meta:
+    id: env_4d154a7783f9f2cacb8294c3e290b8e599a0e28a
+    created: 1747719650873
+    modified: 1747719650873
+    isPrivate: false
